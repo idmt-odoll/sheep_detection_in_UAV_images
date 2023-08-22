@@ -3,5 +3,5 @@ train: train/images
 val: valid/images
 test: test/images
 
-nc: 1
-names: ['sheep']
+names:
+  0: sheep

@@ -1,4 +1,4 @@
-path: /mnt/IDMT-WORKSPACE/DATA-STORE/dollor/SheepCounter.v11
+path: SheepCounter
 train: train/images
 val: valid/images
 test: test/images

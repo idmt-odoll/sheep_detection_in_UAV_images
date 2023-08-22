@@ -1,0 +1,6 @@
+train: ./SheepCounter/train/images # train images
+val: ./SheepCounter/valid/images # val images
+test: ./SheepCounter/test/images
+
+nc: 1
+names: ['sheep']

@@ -1,0 +1,7 @@
+train: ./SheepCounter/images/train # train images
+val: ./SheepCounter/images/valid # val images
+test: ./SheepCounter/images/test
+
+is_coco: False
+nc: 1
+names: ['sheep']
