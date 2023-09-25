@@ -23,7 +23,7 @@ NOTES:
 - [YOLOv8](##yolov8)
 - [YOLOv5u](##yolov5u)
 - [Citation](##citation)
-- [License](##license)
+- [License](##License)
 
 
 ## Dataset and Evaluation
