@@ -1,11 +1,11 @@
 # Sheep Detection in UAV images
 This is the official repo for the paper [**Comparison of Object Detection Algorithms for Livestock Monitoring of Sheep in UAV images**](https://github.com/idmt-odoll/sheep_detection_in_UAV_images/Comparison_of_Object_Detection_Algorithms_for_Livestock_Monitoring_of_Sheep_in_UAV_images.pdf) which will be presented on the 3rd Internation Workshop [Camera traps, AI, and Ecology](https://inf-cv.uni-jena.de/camtrap-ws/), 7th - 8th September 2023 in Jena, Germany. 
 
-Content will be added until/after the presentation at the workshop.
+<font color="red">Currently only the YOLO detectors are included. The remaining detectors from the TensorFlow detection API will be added soon.</font>
 
 In this work, various publicly available general object detectors were tested for the task of detecting sheep in UAV images. 
 Therefore, these detectors were transfer-learned on the same dataset of sheep using their respective standard configuration
-provided in the associated official repo. The following is a guide to transfer-learn the object detectors to reproduce 
+provided in the associated official repo. The following are instructions to transfer-learn the object detectors to reproduce 
 the results of this paper. 
 
 NOTES: 
@@ -29,8 +29,7 @@ NOTES:
 ## Dataset and Evaluation
 
 We used the raw images of the [SheepCounter](https://universe.roboflow.com/riisprivate/sheepcounter/dataset/11) dataset for our experiments. For 
-the YOLO models you need the groundtruth in YOLO format and for the other detectors you will need the COCO format.<br>
-The training set was used for transfer learning, the validation set for monitoring the loss during training, and the 
+the YOLO models you need the groundtruth in YOLO format and for the other detectors you will need the COCO format. The training set was used for transfer learning, the validation set for monitoring the loss during training, and the 
 test set to evaluate the trained models on the COCO metrics. <br> 
 
 For evaluation, we used [pycocotools](https://pypi.org/project/pycocotools/#description). For converting the YOLO format to
@@ -120,11 +119,12 @@ NOTE: the default config is [hyp.scratch.custom.yaml](https://github.com/idmt-od
 We utilised the [ultralytics](https://github.com/ultralytics/ultralytics) package (version 8.0.53) for training and testing.
 The used YOLO class we will be deprecated in version 8.1.x and training instruction should be found on their website.
 
-1. create a python environment and install ultralytics using pip
+1. create a python environment and install ultralytics using pip which should install all necessary packages
    - <code>pip install ultralytics==8.0.53</code>
 2. (optional) Download pretrained models **yolov8n.pt**, **yolov8s.pt**, **yolov8m.pt**, **yolov8l.pt** and **yolov8x.pt** from [here](https://github.com/ultralytics/assets/releases/)
-3. change the variable **path** in **config_v8.yaml** to the downloaded dataset
-4. use script **train_YOLOv8.py** in subdirectory [YOLOv8](https://github.com/idmt-odoll/sheep_detection_in_UAV_images/YOLOv8) and adjust the path to the model
+3. (optional) create a project and copy **config_v8.yaml** and **train_YOLOv8.py** to it
+4. change the variable **path** in **config_v8.yaml** to the downloaded dataset
+5. use script **train_YOLOv8.py** in subdirectory [YOLOv8](https://github.com/idmt-odoll/sheep_detection_in_UAV_images/YOLOv8) and adjust the path to the model
    - instead of downloading the model in step 1, just give the models name without **.pt** suffix
    - adjust the batch size to match your machine (-1 for auto-batch size)
 
@@ -135,11 +135,12 @@ NOTE: The default config is [default.yaml](https://github.com/idmt-odoll/sheep_d
 We utilised the [ultralytics](https://github.com/ultralytics/ultralytics) package (version 8.0.53) for training and testing. 
 The used YOLO class we will be deprecated in version 8.1.x and training instruction should be found on their website.
 
-1. create a python environment and install ultralytics using pip
+1. create a python environment and install ultralytics using pip which should install all necessary packages
    - <code>pip install ultralytics==8.0.53</code>
 2. (optional) Download pretrained models **yolov5nu.pt**, **yolov5su.pt**, **yolov5mu.pt**, **yolov5lu.pt** and **yolov5xu.pt** from [here](https://github.com/ultralytics/assets/releases/)
-3. change the variable **path** in **config_v5u.yaml** to the downloaded dataset
-4. use script **train_YOLOv5u.py** in subdirectory [YOLOv5u](https://github.com/idmt-odoll/sheep_detection_in_UAV_images/YOLOv5u) and adjust the path to the model
+3. (optional) create a project and copy **config_v5u.yaml** and **train_YOLOv5u.py** to it
+4. change the variable **path** in **config_v5u.yaml** to the downloaded dataset
+5. use script **train_YOLOv5u.py** in subdirectory [YOLOv5u](https://github.com/idmt-odoll/sheep_detection_in_UAV_images/YOLOv5u) and adjust the path to the model
    - instead of downloading the model in step 1, just give the models name without **.pt** suffix
    - adjust the batch size to match your machine (-1 for auto-batch size)
 
@@ -152,14 +153,16 @@ NOTE: The default config is [default.yaml](https://github.com/idmt-odoll/sheep_d
 If you found this work useful, consider citing us
 
 ```
-@inproceedings{Doll:2023:ctws,
-  title = {Comparison of Object Detection Algorithms for Livestock Monitoring of Sheep in UAV images},
-  author = {Doll, Oliver and Loos, Alexander},
-  maintitle = {Camera traps, AI, and Ecology},
-  booktitle = {3rd International Workshop},
-  year = {2023},
-  month_numeric = {09}
+@inproceedings{Doll_2023_UAVSheepDetection_CamTrapWS,
+author = {Doll, Oliver and Loos, Alexander},
+title = {{Comparison of Object Detection Algorithms for Livestock Monitoring of Sheep in UAV images}},
+booktitle = {Camera traps, AI, and Ecology - 3rd International Workshop},
+address = {Jena, Germany},
+year = {2023},
+pagres = {},
 }
 ```
 
 ## License
+
+This work is licensed as [Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0) license](https://creativecommons.org/licenses/by-nc/4.0/).
