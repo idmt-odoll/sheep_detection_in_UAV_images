@@ -159,7 +159,7 @@ title = {{Comparison of Object Detection Algorithms for Livestock Monitoring of 
 booktitle = {Camera traps, AI, and Ecology - 3rd International Workshop},
 address = {Jena, Germany},
 year = {2023},
-pagres = {},
+pages = {},
 }
 ```
 
