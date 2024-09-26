@@ -1,7 +1,8 @@
 # Sheep Detection in UAV images
 This is the official repo for the paper [**Comparison of Object Detection Algorithms for Livestock Monitoring of Sheep in UAV images**](https://github.com/idmt-odoll/sheep_detection_in_UAV_images/Comparison_of_Object_Detection_Algorithms_for_Livestock_Monitoring_of_Sheep_in_UAV_images.pdf) which will be presented on the 3rd Internation Workshop [Camera traps, AI, and Ecology](https://inf-cv.uni-jena.de/camtrap-ws/), 7th - 8th September 2023 in Jena, Germany. 
 
-<font color="red">Currently only the YOLO detectors are included. The remaining detectors from the TensorFlow detection API will be added soon.</font>
+This work is continued in [AUTH-Sheep: An Annotated Video Dataset for Detection and Tracking of Sheep in UAV Imagery](https://github.com/idmt-odoll/AUTH-Sheep)
+<font color="red">Only the YOLO detectors are included.</font>
 
 In this work, various publicly available general object detectors were tested for the task of detecting sheep in UAV images. 
 Therefore, these detectors were transfer-learned on the same dataset of sheep using their respective standard configuration
@@ -164,5 +165,8 @@ pages = {},
 ```
 
 ## License
-
 This work is licensed as [Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0) license](https://creativecommons.org/licenses/by-nc/4.0/).
+
+### Acknowledgements
+Funded by HORIZON Europe HE-2022: SPADE – 101060778 ©2023 IEEE.
+
